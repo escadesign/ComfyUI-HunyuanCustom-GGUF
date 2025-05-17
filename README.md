@@ -73,6 +73,12 @@ cd ComfyUI-HunyuanCustom-GGUF
 
 2. **Create + activate environment & install dependencies:**
 
+Create environment:
+```bash
+python -m venv env
+```
+
+Activate environment:
 bsh/zsh:  
 ```bash
 python -m venv env
