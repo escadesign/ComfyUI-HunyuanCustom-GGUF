@@ -270,12 +270,5 @@ class GGMLOps(comfy.ops.manual_cast):
             weight, bias = self.cast_bias_weight(input)
             return torch.nn.functional.group_norm(input, self.num_groups, weight, bias, self.eps)
 
-def move_patch_to_device(item, device):
-    if isinstance(item, torch.Tensor):
-        return item.to(device, non_blocking=True)
-    elif isinstance(item, tuple):
-        return tuple(move_patch_to_device(x, device) for x in item)
-    elif isinstance(item, list):
-        return [move_patch_to_device(x, device) for x in item]
-    else:
-        return item
+def move_patch_to_device(patch, device):
+    return patch
