@@ -34,7 +34,7 @@ setup(
     install_requires=requirements,
     entry_points={
         "console_scripts": [
-            "comfyui-gguf=comfyui_gguf.cli:main",
+            "comfyui-hunyuancustom-gguf=comfyui_hunyuancustom_gguf.cli:main",
         ],
     },
 ) 
