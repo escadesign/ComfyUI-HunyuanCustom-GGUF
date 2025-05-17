@@ -73,12 +73,30 @@ cd ComfyUI-HunyuanCustom-GGUF
 
 2. **Activate environment & install dependencies:**
 
-*bsh/zsh:  source env/bin/activate
-fish: source env/bin/activate.fish
-csh/tcsh: source env/bin/activate.csh
-pwsh: env/bin/Activate.ps1
-cmd.exe: env\Scripts\activate.bat
-PowerShell: env\Scripts\Activate.ps1*
+bsh/zsh:  
+```bash
+source env/bin/activate
+```
+fish:
+```bash
+source env/bin/activate.fish
+```
+csh/tcsh:
+```bash
+source env/bin/activate.csh
+```
+pwsh:
+```bash
+env/bin/Activate.ps1
+```
+cmd.exe:
+```bash
+env\Scripts\activate.bat
+```
+PowerShell:
+```bash
+env\Scripts\Activate.ps1
+```
 
 ```bash
 pip install -r requirements.txt
