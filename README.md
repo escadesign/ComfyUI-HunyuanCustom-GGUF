@@ -71,10 +71,11 @@ git clone https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF.git
 cd ComfyUI-HunyuanCustom-GGUF
 ```
 
-2. **Activate environment & install dependencies:**
+2. **Create + activate environment & install dependencies:**
 
 bsh/zsh:  
 ```bash
+python -m venv env
 source env/bin/activate
 ```
 fish:
