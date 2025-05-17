@@ -1,0 +1,39 @@
+include LICENSE
+include README.md
+include README_AUDIO.md
+include requirements.txt
+include pyproject.toml
+include setup.py
+
+recursive-include comfyui_gguf *.py
+recursive-include comfyui_gguf *.json
+recursive-include comfyui_gguf *.yaml
+recursive-include comfyui_gguf *.yml
+recursive-include comfyui_gguf *.txt
+recursive-include comfyui_gguf *.md
+recursive-include comfyui_gguf *.sh
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
+recursive-exclude * *.so
+recursive-exclude * *.egg
+recursive-exclude * *.egg-info
+recursive-exclude * .DS_Store
+recursive-exclude * .git
+recursive-exclude * .gitignore
+recursive-exclude * .idea
+recursive-exclude * .vscode
+recursive-exclude * *.swp
+recursive-exclude * *.swo
+recursive-exclude * *.log
+recursive-exclude * logs
+recursive-exclude * log
+recursive-exclude * models
+recursive-exclude * output
+recursive-exclude * *.gguf
+recursive-exclude * *.pt
+recursive-exclude * *.pth
+recursive-exclude * *.ckpt
+recursive-exclude * *.safetensors
+recursive-exclude * *.bin
+recursive-exclude * *.onnx 
