@@ -1,4 +1,4 @@
-# ComfyUI-HunyuanCustom-GGUF
+# ComfyUI-HunyuanCustom-GGUF 🏞️ + 🎤 = 🎥
 
 A ComfyUI custom node extension for running Hunyuan models in GGUF format with advanced audio processing capabilities.
 
@@ -8,7 +8,7 @@ A ComfyUI custom node extension for running Hunyuan models in GGUF format with a
 - Audio processing capabilities
 - Stem separation using UVR5
 - VR architecture for vocal processing
-- Batch processing of audio files
+- Batch processing audio files
 
 ## Project Overview
 
