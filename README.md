@@ -71,7 +71,15 @@ git clone https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF.git
 cd ComfyUI-HunyuanCustom-GGUF
 ```
 
-2. **Install dependencies:**
+2. **Activate environment & install dependencies:**
+
+*bsh/zsh:  source env/bin/activate
+fish: source env/bin/activate.fish
+csh/tcsh: source env/bin/activate.csh
+pwsh: env/bin/Activate.ps1
+cmd.exe: env\Scripts\activate.bat
+PowerShell: env\Scripts\Activate.ps1*
+
 ```bash
 pip install -r requirements.txt
 ```
