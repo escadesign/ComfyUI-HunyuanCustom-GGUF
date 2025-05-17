@@ -1,44 +1,66 @@
 [project]
-name = "ComfyUI-HunyuanCustom-GGUF"
-description = "Custom node extension for ComfyUI: Hunyuan models in GGUF format with advanced audio processing."
-version = "2.0.0"
+name = "comfyui_hunyuancustom_gguf"
+version = "0.1.0"
 authors = [
-    {name = "Esca / Max Schäffer"}
+  { name="Max Schäffer", email="esca@esca-mb-6.local" },
 ]
+description = "A custom node for ComfyUI that uses GGUF models"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { file = "LICENSE" }
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Topic :: Multimedia :: Sound/Audio :: Analysis",
-    "Topic :: Multimedia :: Sound/Audio :: Conversion"
 ]
-dependencies = ["gguf>=0.13.0", "sentencepiece", "protobuf"]
+dependencies = [
+    "numpy",
+    "torch",
+    "transformers",
+    "safetensors",
+    "tqdm",
+    "requests",
+    "huggingface_hub",
+    "einops",
+    "accelerate",
+    "bitsandbytes",
+    "scipy",
+    "soundfile",
+    "librosa",
+    "matplotlib",
+    "pydub",
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "mypy",
+    "ruff",
+    "pre-commit",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-autodoc-typehints",
+    "sphinx-copybutton",
+    "sphinx-tabs",
+    "sphinx-panels",
+    "sphinx-rtd-dark-mode",
+    "sphinx-rtd-theme",
+    "sphinx-autodoc-typehints",
+    "sphinx-copybutton",
+    "sphinx-tabs",
+    "sphinx-panels",
+    "sphinx-rtd-dark-mode",
+]
 
 [project.urls]
-Repository = "https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF"
+"Homepage" = "https://github.com/escadesign/ComfyUI-HunyuanCustom-GGUF"
+"Bug Tracker" = "https://github.com/escadesign/ComfyUI-HunyuanCustom-GGUF/issues"
 
-[tool.comfy]
-PublisherId = "yourusername"
-DisplayName = "ComfyUI-HunyuanCustom-GGUF"
-Icon = ""
-
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = ["comfyui_hunyuancustom_gguf"]
+package-dir = {"" = "."}
 
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ["py38"]
 include = '\.pyi?$'
 
 [tool.isort]
@@ -47,6 +69,7 @@ multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
+ensure_newline_before_comments = true
 line_length = 88
 
 [tool.mypy]
@@ -62,6 +85,16 @@ warn_redundant_casts = true
 warn_unused_ignores = true
 warn_no_return = true
 warn_unreachable = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF"]
+ignore = ["E501"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
