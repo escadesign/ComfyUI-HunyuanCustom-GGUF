@@ -1,19 +1,40 @@
-Homepage = "https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF"
-Repository = "https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF.git"
+[project]
+name = "ComfyUI-HunyuanCustom-GGUF"
+description = "Custom node extension for ComfyUI: Hunyuan models in GGUF format with advanced audio processing."
+version = "2.0.0"
+authors = [
+    {name = "Esca / Max Schäffer"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Conversion"
+]
+dependencies = ["gguf>=0.13.0", "sentencepiece", "protobuf"]
 
-[project.scripts]
-comfyui-hunyuancustom-gguf = "comfyui_hunyuancustom_gguf.cli:main"
-
-[tool.setuptools]
-packages = ["comfyui_hunyuancustom_gguf"]
-
-[tool.setuptools.dynamic]
-dependencies = {file = "requirements.txt"}
+[project.urls]
+Repository = "https://github.com/yourusername/ComfyUI-HunyuanCustom-GGUF"
 
 [tool.comfy]
 PublisherId = "yourusername"
 DisplayName = "ComfyUI-HunyuanCustom-GGUF"
 Icon = ""
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.black]
 line-length = 88
