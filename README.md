@@ -79,9 +79,9 @@ python -m venv env
 ```
 
 Activate environment:
+
 bsh/zsh:  
 ```bash
-python -m venv env
 source env/bin/activate
 ```
 fish:
